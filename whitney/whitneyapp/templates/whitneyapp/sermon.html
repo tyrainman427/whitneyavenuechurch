@@ -1,0 +1,70 @@
+{% extends 'whitneyapp/base.html' %}
+{% load static %}
+
+{% block body %}
+
+  {% comment %} <style>
+    .card-deck{
+      margin-top: 10px;
+      margin-left: auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      grid-gap: .5rem;
+  }
+
+  </style> {% endcomment %}
+
+
+    <!-- Features Section-->
+    <section class="bg-cencer bg-cover" style="background: url({% static 'img/hero-bg-3.jpg' %})">
+        <div class="container mt-5"></div>
+    </section>
+
+        <div class="container mt-5">
+            <header class="mb-4 text-center mb-5">
+              <p class="text-serif mt-2 mb-0 text-primary">Watch our services online</p>
+              <h2 class="text-uppercase">Our latest sermons</h2>
+            </header>
+
+            <div class="container mb-5">
+              <div class="row">
+              
+                <div class="card-deck mx-auto" style="min-width: 18rem;">
+                {% for vid in sermon %}
+                <div class="card" style="width: 18rem;">
+                  <img class="card-img-top" src="{{ vid.image.url }}" alt="Card image cap">
+                  <div class="card-body">
+                    <h5 class="card-title">{{vid.title}}</h5>
+                    <p class="text-serif text-primary text-small">{{ vid.source }}</p>
+                    <p class="text-muted text-truncate">{{ vid.description }} </p>
+                    {% comment %} <a href="#" class="btn btn-primary">Go somewhere</a> {% endcomment %}
+                  </div>
+                  {% comment %} <div class="card-footer mb-3">
+                    <small class="text-muted">Last updated 3 mins ago</small>
+                  </div> {% endcomment %}
+                </div>
+                {% endfor %}
+              </div>
+            </div>
+              </div>
+            </div>
+
+            {% comment %} <div class="row">
+      
+                <div class="card">
+                  <img class="card-img-top" src="{% static 'img/wilton.png' %}" alt="Card image cap">
+                  <div class="card-body">
+                    <h5 class="card-title">Mark 8:27-29 Who is Jesus to you?</h5>
+                    <p class="text-serif text-primary text-small">FaceBook</p>
+                  <p class="text-muted">Purpose: To see how resistance to drop everything to meet an urgent need can achieve an important long-range goal.</p>
+                  </div>
+                  <div class="card-footer">
+                    <small class="text-muted">Last updated 3 mins ago</small>
+                  </div>
+                </div>
+             
+              </div> {% endcomment %}
+        
+          </div>
+   
+  {% endblock %}

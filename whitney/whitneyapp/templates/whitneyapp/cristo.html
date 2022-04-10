@@ -1,0 +1,68 @@
+{% extends 'whitneyapp/base.html' %}
+{% load static %}
+
+{% block body %}
+
+        <section class="bg-cover bg-fixed shadow-inner" id="volunteer" style="background: url({% static 'img/espanol.jpeg' %})">
+            <div class="py-5">
+              <div class="overlay-content index-forward py-5">
+                <div class="container py-5 text-white text-center">
+                  <p class="lead text-serif mb-1">DÍA DE SERVICIOS</p>
+                  <h2 class="text-xl text-shadow mb-4">Iglesia de Cristo</h2>
+                </div>
+              </div>
+           </div>
+          <div class="container py-5">
+            <div class="row text-center mb-5">
+              <div class="col-lg-4 mb-4 mb-lg-0"><i class="fas fa-church text-primary mb-4 fa-3x"></i>
+                <!-- <h3 class="h5">Tour the chapel</h3> -->
+                <!-- <p class="text-muted">Lorem ipsum dolor sit amet, consectetur elit sed do eiusmod tempor incididunt labore.</p> -->
+              </div>
+              <div class="col-lg-4 mb-4 mb-lg-0"><i class="fas fa-bible text-primary mb-4 fa-3x"></i>
+                <!-- <h3 class="h5">Chapel weddings</h3> -->
+                <!-- <p class="text-muted">Lorem ipsum dolor sit amet, consectetur elit sed do eiusmod tempor incididunt labore.</p> -->
+              </div>
+              <div class="col-lg-4"><i class="fas fa-praying-hands text-primary mb-4 fa-3x"></i>
+                <!-- <h3 class="h5">Special events</h3> -->
+                <!-- <p class="text-muted">Lorem ipsum dolor sit amet, consectetur elit sed do eiusmod tempor incididunt labore.</p> -->
+              </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">           
+                  <div class="mapouter"><div class="gmap_canvas"><iframe width="800" height="400" id="gmap_canvas" src="https://maps.google.com/maps?q=2141%20Whitney%20Avenue,%20North%20Haven,%20CT%2006473&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://123movies-to.org"></a><br><style>.mapouter{position:relative;text-align:right;height:500px;width:600px;}</style><a href="https://www.embedgooglemap.net"></a><style>.gmap_canvas {overflow:hidden;background:none!important;height:500px;width:600px;}</style></div></div>
+                </div>
+                <div class="col-lg-6 mb-0">
+                  <div class="bg-light p-5 h-90 shadow p-3 mb-5 bg-white rounded">
+                    <h4>Service Times</h4>
+                    <p class="text-muted"></p>
+                    <div class="col-md-12">
+                      <!-- <h5 class="mb-4 mt-3"></h5> -->
+                      <ul class="list-unstyled">
+                        <li class="mb-2">
+                          <h6 class="mb-1"> <a class="reset-anchor text-primary" href="#">MIERCOLES</a></h6>
+                          <p class="text-muted text-small text-fancy mb-0">7PM - 9PM</p>
+                        </li>
+                        <li class="mb-2">
+                          <h6 class="mb-1"> <a class="reset-anchor text-primary" href="#">VIERNES</a></h6>
+                          <p class="text-muted text-small text-fancy mb-0">7PM - 9PM</p>
+                        </li>
+                        <li class="mb-2">
+                          <h6 class="mb-1"> <a class="reset-anchor text-primary" href="#">DOMINGO</a></h6>
+                          <p class="text-muted text-small text-fancy mb-0">3PM - 5PM</p>
+                        </li>
+                        <li class="mb-2">
+                            <h6 class="mb-1"> <a class="reset-anchor text-primary" href="#">Edwin Jimenez</a></h6>
+                          </li>
+                      </ul>
+                    </div>
+                      <ul class="list-unstyled mb-0 text-muted">
+                    <li class="mb-2"><a class="reset-anchor" href="tel:+2034356535"> <i class="fas fa-phone text-primary mr-3"></i><span>(203) 435 6535</span></a></li>
+                    <li class="mb-2"><a class="reset-anchor"> <i class="fas fa-globe-americas text-primary mr-3"></i><span>2141 Whitney Avenue, North Haven, CT 06473</span></a></li>
+                  </ul>
+                  </div>
+                  </div>
+                </div>
+                  </div>
+          </section>
+  
+{% endblock %}

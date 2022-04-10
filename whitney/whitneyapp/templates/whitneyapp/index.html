@@ -1,0 +1,225 @@
+{% extends 'whitneyapp/base.html' %}
+{% load static %}
+
+{% block body %}
+    <!-- Hero Slider -->
+    <section class="bg-cover bg-fixed shadow-inner" style="background: url({% static 'img/divider-img-2.jpg' %})">
+      <div class="dark-overlay py-5">
+        <div class="overlay-content index-forward py-5">
+          <div class="container text-white text-center py-5 my-5 index-forward">
+            <h1 class="text-uppercase text-l">Whitney Avenue Church of Christ</h1>
+            <div class="row">
+              <div class="col-lg-7 mx-auto">
+                <p class="lead">
+                A Place Where You Belong</p><a class="btn btn-primary px-4" href="{% url 'whitney:about' %}">Read More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>    
+
+    
+    <!-- Scriptures Section-->
+    <section id="features">
+      <div class="container-fluid p-0">
+        <div class="row p-0 text-center align-items-stretch">
+          <div class="col-lg-4 col-md-6 p-0">
+            <div class="p-5 bg-primary text-white h-100">
+              <h5>Hear (Romans 10:14)</h5>
+              <p class="mb-0 text-small">But how can they call on him to save them unless they believe in him? And how can they believe in him if they have never heard about him? And how can they hear about him unless someone tells them?</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 p-0">
+            <div class="p-5 bg-primary-shade text-white h-100">
+              <h5>Believe (Mark 16:16;John 8:24)</h5>
+              <p class="mb-0 text-small">Anyone who believes and is baptized will be saved. But anyone who refuses to believe will be condemned. That is why I said that you will die in your sins; for unless you believe that I am who I claim to be, you will die in your sins.”</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 p-0">
+            <div class="p-5 bg-primary text-white h-100">
+              <h5>Repent (Acts 17:30;Acts 2:38)</h5>
+              <p class="mb-0 text-small">“God overlooked people’s ignorance about these things in earlier times, but now he commands everyone everywhere to repent of their sins and turn to him.</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 p-0">
+            <div class="p-5 bg-primary-shade text-white h-100">
+              <h5>Confess (Romans 10:9-10)</h5>
+              <p class="mb-0 text-small">If you openly declare that Jesus is Lord and believe in your heart that God raised him from the dead, you will be saved. For it is by believing in your heart that you are made right with God, and it is by openly declaring your faith that you are saved.</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 p-0 order-md-4 order-lg-3">
+            <div class="p-5 bg-primary text-white h-100">
+              <h5>Baptism (Matthew 28:18-20; Acts 2:38-41)</h5>
+              <p class="mb-0 text-small">Jesus came and told his disciples, “I have been given all authority in heaven and on earth. Therefore, go and make disciples of all the nations,baptizing them in the name of the Father and the Son and the Holy Spirit. Teach these new disciples to obey all the commands I have given you. And be sure of this: I am with you always, even to the end of the age.”</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 p-0 order-md-3 order-lg-4">
+            <div class="p-5 bg-primary-shade text-white h-100">
+              <h5>Live Faithfully (Revelations 2:10)</h5>
+              <p class="mb-0 text-small">Don’t be afraid of what you are about to suffer. The devil will throw some of you into prison to test you. You will suffer for ten days. But if you remain faithful even when facing death, I will give you the crown of life. </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mission Section-->
+    <section id="works" class="mt-5 mb-5">
+      <div class="container-fluid px-0">
+        <div class="row align-items-stretch">
+          <div class="col-lg-6 half-page-banner bg-cover" style="background: url({% static 'img/church3.jpeg' %})"></div>
+          <div class="col-lg-6 bg-light py-lg-5">
+            <div class="h-100 d-flex flex-column p-5 justify-content-center">
+              <p class="text-serif text-primary mb-0"></p>
+              <h2 class="text-uppercase">Our Mission</h2>
+              <p class="text-muted">A place where like minded Christians can worship, fellowship and grow in the knowledge of Jesus Christ our lord and savior. We strive to spread the message and love of Christ, while growing in maturity and equiping the saints for the jobs of ministry. The church is a light on a hill bringing the good news to all.</p>
+              <ul class="list-check pl-0">
+                {% comment %} <li>
+                  <p class="mb-0 text-muted mb-2">Eu vim atqui ludus petentium, suas idque est id.</p>
+                </li>
+                <li>
+                  <p class="mb-0 text-muted mb-2">Ne veniam oblique propriae vim, dicant.</p>
+                </li>
+                <li>
+                  <p class="mb-0 text-muted mb-2">Sed everti utroque, vis ea oblique pertinax con.</p>
+                </li> {% endcomment %}
+              </ul><img class="mb-3" src="{% static 'img/signature.png' %}" alt="..." width="90">
+              <h6 class="text-uppercase mb-0">Wilton Carraway</h6>
+              <p class="text-serif text-primary text-small mb-0">Pastor</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+   
+    <!-- Next Event Section-->
+    <section class="bg-primary-shade text-white py-5 mt-5 mb-5" id="events">
+      <div class="container text-center">
+        <div class="row align-items-center">
+          <div class="col-lg-3 text-lg-right mb-4 mb-lg-0">
+            <h2 class="mb-0 text-uppercase">Next Event</h2>
+          </div>
+          <div class="col-lg-6 text-center mb-4 mb-lg-0">
+            <p class="text-serif mb-0">Sunday Service</p>
+            <div class="mx-auto d-flex flex-wrap justify-content-center" id="countdown" datetime="2022-01-27T08:30:00+0100"></div>
+          </div>
+          <div class="col-lg-3 text-lg-right"><a class="btn btn-outline-light px-4" href="{% url 'whitney:events' %}">Learn more</a></div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Services Section-->
+    {% comment %} <section class="pb-5">       
+      <div class="container pb-5 buttonSize">
+        <div class="row align-items-center text-center">
+          <div class="col-lg-3 col-sm-6 my-2 my-sm-0">
+              <!-- Button trigger modal -->
+              <button type="button" class="btn btn-outline-light bg-primary" alt="..." style="width:100%" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Men's Empowerment
+              </button>
+              
+              <!-- Modal -->
+              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Monday - Men's Empowerment </h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      ...
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+           </div> 
+           <div class="col-lg-3 col-sm-6 my-2 my-sm-0">
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-outline-light bg-primary" alt="..." style="width:100%" data-bs-toggle="modal" data-bs-target="#exampleModal1">
+              Women's Fellowship
+            </button>
+            
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Saturday - Women's Fellowship </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    Test info
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+         </div> 
+          <div class="col-lg-3 col-sm-6 my-2 my-sm-0">
+                 <!-- Button trigger modal -->
+                 <button type="button" class="btn btn-outline-light bg-primary" style="width:100%" alt="..." width="120" data-bs-toggle="modal" data-bs-target="#exampleModal3">
+                    Espanol
+                  </button>
+                  
+                  <!-- Modal -->
+                  <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel">Cristo</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                          ...
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                          
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-lg-3 col-sm-6 my-2 my-sm-0">
+             <!-- Button trigger modal -->
+             <button type="button" class="btn btn-outline-light bg-primary" style="width:100%"  alt="welcome vistors button" width="120" data-bs-toggle="modal" data-bs-target="#exampleModal4">
+                Welcome Visitors
+              </button>
+              
+              <!-- Modal -->
+              <div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Welcome </h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <p>Every effort is made to allow visitors to feel comfortable. You will not be singled out during the service in any way. You will not be asked to make a "love-offering"; in fact, no collections will be taken at all
+                        except during the Sunday morning service when members make their weekly contribution as an act of worship. Visitors are not expected to participate.
+                        <br>
+                        Our services generally open with a brief welcome from one of our members. The song leader then leads the congregation in two or three songs. An opening prayer is offered, follwed by another song, and then the preacher delivers the sermon fro the bible.
+                        All are encouraged to bring their Bilbles and follow along as he leads the study(2 Timothy 2:15). At the end of the sermon, the Lord's invitation is offered (Matthew 11:28-30) for any who want to become Christians or rededicate their lives to God.
+                        There is no coercion. <br>
+                        During the Sunday morning service, the Lord's Supper also is observed by partaking of unleaved bread and fruit of the vine. (1 Corinthians 11:23-29). The service lasts about an hour and concludes with a song and a final prayer. Visitors may sit sliently through the service, or they may participate.
+                      </p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </div>
+      </div>
+    </section> {% endcomment %}
+  </section>
+  {% endblock %}

@@ -1,0 +1,118 @@
+{% extends 'whitneyapp/base.html' %}
+{% load static %}
+  
+{% block body %}
+<style>
+  .card {
+  border: 2px solid lightgold;
+  border-radius: 20%
+  }
+</style>
+
+
+    <!-- Features Section-->
+    <section class="bg-cover bg-fixed shadow-inner" id="volunteer" style="background: url({% static 'img/church1.jpeg' %})">
+      <div class="dark-overlay py-5">
+        <div class="overlay-content index-forward py-5">
+          <div class="container py-5 text-white text-center">
+            <p class="lead text-serif mb-1">Whitney Avenue Church of Christ</p>
+            <h2 class="text-xl text-shadow mb-4">Who We Are</h2>
+            <header class="mb-4 mb-5 text-center">
+              <p class="text-serif mb-0 text-primary"></p>
+              <h2 class="text-uppercase">A place where you belong</h2>
+              <div class="row">
+                <div class="col-lg-7 mx-auto">
+                  <p class="text-white">A community where authenticity and real relationships are valued. We are a group of diverse believers focused on pleasing God and learning God's word. We believe that everyone needs a safe place to explore faith for themselves and their families. Allow ua to be that place for you.</p>
+                </div>
+              </div>
+            </header>
+          </div>
+        </div>
+      </div>    
+
+
+ 
+            <!-- Contact Section-->
+            <div class="container py-5">
+            
+               
+                 {% comment %} <div class="row align-items-stretch">
+                  <!-- <div class="col-lg-6 pr-lg-0">           
+                    <div class="contact-img bg-center bg-cover" style="background: url(img/contact-bg.jpg)"></div>
+                  </div> -->
+                  <div class="col-lg-6 pl-lg-0">
+                    <div class="card h-100 shadow p-3 mb-5 bg-white rounded">
+                      <div class="card-body mt-3">
+                        <h4 class="card-title text-center">History</h4>
+                        <!-- <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6> -->
+                        <p>A brief introduction to the Church of Christ. The church of Christ dates back to the days of the New Testament (see Romans 16:16). It was founded by Chirst on the Day of the Pentecost, A.D. 33 (Acts 2), just about a month His ascension back to heaven.
+                          In the years followed, it rapidily grew to fill Jerusalem, then Judea, Smaria, and finally the whole Roman Empire (Acts 1:8; Colossians 1:23). In America, the first churches of Chris were planted in the late 1700s as a result a movement to "go back to the Bible" and do Bible things in the Bible ways and call Bible things by Bible names(Peter 4:1).
+                          <br>
+                          We Believe that Jesus is the Son of God (John 20:30-31), that the Bible is inspired of God (2 Timothy 3:16-17), and that Christ will return to take His kingdom home to God(1 Corinthians 15:24). 
+                           <br>
+                          During the Sunday morning service, the Lord's Supper also is observed by partaking of unleaved bread and fruit of the vine. (1 Corinthians 11:23-29). The service lasts about an hour and concludes with a song and a final prayer. Visitors may sit sliently through the service, or they may participate.
+                        </p>
+                        <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+                        <!-- <a href="#" class="card-link">Card link</a>
+                        <a href="#" class="card-link">Another link</a> -->
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-6 pl-lg-0">
+                    <div class="bg-light p-5 h-100 shadow p-3 mb-5 bg-white rounded">
+                      <h4 class="text-center">Whitney Avenue Church Of Christ</h4>
+                      <p>Is a non-denominational, non-traditional, Gospel centered church. Taking a fresh view of Scripture and making everyday applications we focus on how we can live out the message of Christ by uniting all people in the fundamental teachings of love. We strive to understand our purpose as individuals,
+                           family members, a body of believers and lights in society. We are ambassadors who are to bring the truth of Christ first to our own hearts and upon conviction, to the people and the community we serve. <br><br> We are passionate about the lord. We have a deep sense of love for mankind and our doors are open to all.
+                        Whether you are a novice in the Scripture, a seasoned saint or someone who is just beginning their spiritual journey with doubts that Christ even existed we welcome you.<br><br> Whitney Avenue Chruch of Christ is a safe place for the college student, single person, couple or family to come and seek the answers your heart longs for.
+                    <br><br><b>We serve Hamden, North Haven, New Haven, surrounding communities in the New Haven County, CT and anywhere the lord directs us.</b><br><br>
+                The senior preacher of this congregation is<br> Wilton Carraway Jr.</p>
+                      
+                    </div>
+                  </div>  {% endcomment %}
+                </div>
+              </div>
+            </section> 
+
+            <section>
+              <div class="container mt-5 mb-5">
+                <div class="accordion" id="accordionExample">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        History
+                      </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                        <strong>A brief introduction to the Church of Christ.</strong> 
+                        <p>The church of Christ dates back to the days of the New Testament (see Romans 16:16). It was founded by Chirst on the Day of the Pentecost, A.D. 33 (Acts 2), just about a month His ascension back to heaven.
+                          In the years followed, it rapidily grew to fill Jerusalem, then Judea, Smaria, and finally the whole Roman Empire (Acts 1:8; Colossians 1:23). In America, the first churches of Chris were planted in the late 1700s as a result a movement to "go back to the Bible" and do Bible things in the Bible ways and call Bible things by Bible names(Peter 4:1).
+                          <br>
+                          We Believe that Jesus is the Son of God (John 20:30-31), that the Bible is inspired of God (2 Timothy 3:16-17), and that Christ will return to take His kingdom home to God(1 Corinthians 15:24). 
+                           <br>
+                          During the Sunday morning service, the Lord's Supper also is observed by partaking of unleaved bread and fruit of the vine. (1 Corinthians 11:23-29). The service lasts about an hour and concludes with a song and a final prayer. Visitors may sit sliently through the service, or they may participate.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        About Us
+                      </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                        <strong>Whitney Avenue Church Of Christ</strong><p>Is a non-denominational, non-traditional, Gospel centered church. Taking a fresh view of Scripture and making everyday applications we focus on how we can live out the message of Christ by uniting all people in the fundamental teachings of love. We strive to understand our purpose as individuals,
+                          family members, a body of believers and lights in society. We are ambassadors who are to bring the truth of Christ first to our own hearts and upon conviction, to the people and the community we serve. <br><br> We are passionate about the lord. We have a deep sense of love for mankind and our doors are open to all.
+                       Whether you are a novice in the Scripture, a seasoned saint or someone who is just beginning their spiritual journey with doubts that Christ even existed we welcome you.<br><br> Whitney Avenue Chruch of Christ is a safe place for the college student, single person, couple or family to come and seek the answers your heart longs for.
+                   <br><br><b>We serve Hamden, North Haven, New Haven, surrounding communities in the New Haven County, CT and anywhere the lord directs us.</b><br><br>
+               The senior preacher of this congregation is<br> Wilton Carraway Jr.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </section>
+      {% endblock %}

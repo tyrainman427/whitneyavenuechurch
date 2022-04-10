@@ -1,0 +1,136 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Whitney Avenue Church Of Christ</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="all,follow">
+    <!-- Bootstrap CSS-->
+    <link rel="stylesheet" href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Google fonts-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,700&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playfair+Display:500i&amp;display=swap">
+    <!-- Owl Carousel-->
+    <link rel="stylesheet" href="{% static 'vendor/owl.carousel2/assets/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'vendor/owl.carousel2/assets/owl.theme.default.min.css' %}">
+    <!-- theme stylesheet-->
+    <link rel="stylesheet" href="{% static 'css/style.default.css' %}" id="theme-stylesheet">
+    <!-- Custom stylesheet - for your changes-->
+    <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="{% static 'img/whitney.png' %}">
+    {% comment %} <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> {% endcomment %}
+  <body>
+    <!-- navbar-->
+    <header class="header">
+      <nav class="navbar navbar-expand-lg navbar-dark position-absolute w-100">
+        <div class="container"><a class="navbar-brand d-block d-lg-none" href="{% url 'whitney:home' %}"><img src="{% static 'img/whitney.png' %}" alt="..." width="60"></a>
+          <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item"><a class="nav-link" href="{% url 'whitney:home' %}">Home </a></li>
+              {% comment %} <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="collapse" data-target=".navbar-collapse" data-bs-toggle="dropdown" aria-expanded="false">
+                  About Us
+                </a> {% endcomment %}
+                {% comment %} <ul class="dropdown-menu" aria-labelledby="navbarDropdown"> {% endcomment %}
+                  <li><a class="nav-link" href="{% url 'whitney:about' %}">Who We Are</a></li>
+                  <li><a class="nav-link" href="{% url 'whitney:pastor' %}">Meet the Pastor</a></li>
+                {% comment %} </ul> {% endcomment %}
+              </li>
+              <li class="nav-item"><a class="nav-link" href="{% url 'whitney:sermon' %}">Ministries|Sermons</a></li>
+              <li class="nav-item"><a class="nav-link" href="{% url 'whitney:service' %}">Service Time</a></li>
+            </ul>         
+
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item"><a class="nav-link" href="{% url 'whitney:cristo' %}">Iglesia De Cristo</a></li>
+              <li class="nav-item"><a class="nav-link" href="{% url 'whitney:contact' %}">Contact Us</a></li>
+              <li class="nav-item"><a class="nav-link" href="{% url 'whitney:events' %}">Events</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Donations</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav> 
+    </header>
+
+    <section>
+        {% block body %}
+        {% endblock %}
+    </section>
+  
+    <!-- Scroll Top Button--><a class="scroll-top" href="#"><i class="fas fa-long-arrow-alt-up"></i></a>
+    <footer class="pt-5 text-white" style="background: #111">
+      <div class="container pt-5">
+        <div class="row mb-3 pb-5">
+          <div class="col-md-4 col-sm-12"><img class="mb-3" src="{% static 'img/whitney.png' %}" alt="..." width="180">
+            <p class="text-small text-muted">2141 Whitney Ave <br>North Haven, CT 06473 </p>
+          </div>
+          <div class="col-md-4 col-sm-12">
+            <h5 class="mb-4 mt-3">Church Hours</h5>
+            <ul class="list-unstyled">
+              <li class="mb-2">
+                <h6 class="mb-1 text-primary">Monday - Men's Empowerment</a></h6>
+                <p class="text-muted text-small text-fancy mb-0">5PM - 6PM</p>
+              </li>
+              <li class="mb-2">
+                <h6 class="mb-1 text-primary">Tuesday - Closed</a></h6>
+              </li>
+              <li class="mb-2">
+                <h6 class="mb-1 text-primary">Wednesday - Espanol</a></h6>
+                <p class="text-muted text-small text-fancy mb-0">TBD</p>
+              </li>
+              <li class="mb-2">
+                <h6 class="mb-1 text-primary">Thursday</a></h6>
+                <p class="text-muted text-small text-fancy mb-0">7PM - 8PM</p>
+              </li>
+              <li class="mb-2">
+                <h6 class="mb-1 text-primary">Friday - Closed</a></h6>
+              </li>
+              <li class="mb-2">
+                <h6 class="mb-1 text-primary">Saturday - Ladies Fellowship</a></h6>
+                <p class="text-muted text-small text-fancy mb-0">TBD</p>
+              </li>
+              <li class="mb-2">
+                <h6 class="mb-1 text-primary">Sunday</h6>
+                <p class="text-muted text-small text-fancy mb-0">10aM - 12:30PM Espanol 2PM</p>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-4 col-sm-12">
+            <h5 class="mb-4 mt-3">Newsletter</h5>
+            <form action="https://formsubmit.co/tyraineytech@gmail.com" method="POST" />
+            <p class="text-small text-muted">Please subscribe to our newsletter if you want to stay updated with current events.</p>
+            <div class="input-group">
+              <input class="form-control border-dark text-white rounded-0" type="email" name="email" placeholder="Enter your email address" aria-label="email address" aria-describedby="button-addon2">
+              <div class="input-group-append">
+                <button class="btn btn-primary px-4" id="button-addon2" type="submit"><i class="fas fa-paper-plane"></i></button>
+              </div>
+            </div>
+        </form>
+          </div>
+        </div>
+        <div class="py-4 border-top border-dark text-center">
+          <p class="mb-0 text-muted">Copyright © 2022 Whitney Avenue Church Of Christ. <a class="reset-anchor text-primary" href="https://www.rainmantechnologies.com"> website by Rainman Technologies</a>.</p> 
+        </div>
+      </div>
+    </footer>
+    <!-- JavaScript files-->
+    <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'vendor/owl.carousel2/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'vendor/jquery-circle-progress/circle-progress.min.js' %}"></script>
+    <script src="{% static 'vendor/smooth-scroll/smooth-scroll.min.js' %}"></script>
+    <script src="{% static 'vendor/jquery.countdown/jquery.countdown.js' %}"></script>
+    <script src="{% static 'js/front.js' %}"></script>
+    <script src="{% static 'js/index.js' %}"></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <!-- FontAwesome CSS - loading as last, so it doesn't block rendering-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  </body>
+</html>

@@ -1,0 +1,88 @@
+{% extends 'whitneyapp/base.html' %}
+{% load static %}
+
+{% block body %}
+
+    <!-- Features Section-->
+    <section class="bg-cover bg-fixed shadow-inner" id="volunteer" style="background: url({% static 'img/bible.jpeg' %})">
+      <div class="py-5">
+        <div class="overlay-content index-forward py-5">
+          <div class="container py-5 text-white text-center">
+            <p class="lead text-serif mb-1">Our Services</p>
+            <h2 class="text-xl text-shadow mb-4">Whitney Avenue Church of Christ</h2>
+          </div>
+        </div>
+      </div>    
+        <div class="container py-5">
+            <header class="mb-4 mb-5 text-center">
+              <p class="text-serif mb-0 text-white">Where to find us</p>
+              <h2 class="text-uppercase text-white">Come Join Us</h2>
+              <div class="row">
+                <div class="container py-5">
+                  <div class="row text-center">
+                    <div class="col-lg-4 mb-4 mb-lg-0"><i class="fas fa-church text-primary mb-4 fa-3x"></i>
+                      <!-- <h3 class="h5">Tour the chapel</h3> -->
+                      <!-- <p class="text-muted">Lorem ipsum dolor sit amet, consectetur elit sed do eiusmod tempor incididunt labore.</p> -->
+                    </div>
+                    <div class="col-lg-4 mb-4 mb-lg-0"><i class="fas fa-bible text-primary mb-4 fa-3x"></i>
+                      <!-- <h3 class="h5">Chapel weddings</h3> -->
+                      <!-- <p class="text-muted">Lorem ipsum dolor sit amet, consectetur elit sed do eiusmod tempor incididunt labore.</p> -->
+                    </div>
+                    <div class="col-lg-4"><i class="fas fa-praying-hands text-primary mb-4 fa-3x"></i>
+                      <!-- <h3 class="h5">Special events</h3> -->
+                      <!-- <p class="text-muted">Lorem ipsum dolor sit amet, consectetur elit sed do eiusmod tempor incididunt labore.</p> -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </header>
+            <div class="row align-items-stretch">
+              <div class="col-lg-6 pr-lg-0">           
+                <div class="mapouter"><div class="gmap_canvas"><iframe width="800" height="400" id="gmap_canvas" src="https://maps.google.com/maps?q=2141%20Whitney%20Avenue,%20North%20Haven,%20CT%2006473&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://123movies-to.org"></a><br><style>.mapouter{position:relative;text-align:right;height:500px;width:600px;}</style><a href="https://www.embedgooglemap.net"></a><style>.gmap_canvas {overflow:hidden;background:none!important;height:500px;width:600px;}</style></div></div>
+              </div>
+              <div class="col-lg-6 pl-lg-0 mb-0">
+                <div class="bg-light p-3 h-80 shadow p-3 mb-5 bg-white rounded">
+                  <h4>Service Times</h4>
+                  <p class="text-muted"></p>
+                  <div class="col-md-12">
+                    <!-- <h5 class="mb-4 mt-3"></h5> -->
+                    <ul class="list-unstyled">
+                      <li class="mb-2">
+                        <h6 class="mb-1"> <a class="reset-anchor text-primary" href="#">Monday - Men's Empowerment</a></h6>
+                        <p class="text-muted text-small text-fancy mb-0">5PM - 6PM</p>
+                      </li>
+                      <li class="mb-2">
+                        <h6 class="mb-1"> <a class="reset-anchor text-primary" href="#">Tuesday - Closed</a></h6>
+                      </li>
+                      <li class="mb-2">
+                        <h6 class="mb-1"> <a class="reset-anchor text-primary" href="#">Wednesday - Espanol</a></h6>
+                        <p class="text-muted text-small text-fancy mb-0">TBD</p>
+                      </li>
+                      <li class="mb-2">
+                        <h6 class="mb-1"> <a class="reset-anchor text-primary" href="#">Thursday</a></h6>
+                        <p class="text-muted text-small text-fancy mb-0">7PM - 8PM</p>
+                      </li>
+                      <li class="mb-2">
+                        <h6 class="mb-1"> <a class="reset-anchor text-primary" href="#">Friday - Closed</a></h6>
+                      </li>
+                      <li class="mb-2">
+                        <h6 class="mb-1"> <a class="reset-anchor text-primary" href="#">Saturday - Ladie's Fellowship</a></h6>
+                        <p class="text-muted text-small text-fancy mb-0">TBD</p>
+                      </li>
+                      <li class="mb-2">
+                        <h6 class="mb-1"> <a class="reset-anchor text-primary" href="#">Sunday</a></h6>
+                        <p class="text-muted text-small text-fancy mb-0">10AM - 12:30PM Espanol 2PM</p>
+                      </li>
+                    </ul>
+                  </div>
+                  <!-- <ul class="list-unstyled mb-0 text-muted">
+                    <li class="mb-2"><a class="reset-anchor" href="tel:+2032487431"> <i class="fas fa-phone text-primary mr-3"></i><span>+203 248 7431</span></a></li>
+                    <li class="mb-2"><a class="reset-anchor" href="text.html"> <i class="fas fa-globe-americas text-primary mr-3"></i><span>2141 Whitney Avenue, North Haven, CT 06473</span></a></li>
+                    <li class="mb-2"><a class="reset-anchor" href="mailto:church@example.com"> <i class="far fa-envelope text-primary mr-3"></i><span>info@whitneyavenuechurchofchrist.com</span></a></li>
+                  </ul> -->
+                </div>
+              </div>
+            </div>
+          </div>
+    </section>
+ {% endblock %}

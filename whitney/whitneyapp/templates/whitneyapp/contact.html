@@ -1,0 +1,75 @@
+{% extends 'whitneyapp/base.html' %}
+{% load static %}
+
+{% block body %}
+
+    <style type="text/css">
+        .custom-centered{
+         margin:0 auto;
+         width: 80%;
+        }
+        </style>
+  
+    <!-- Features Section-->
+    <section class="bg-cencer bg-cover mb-5" style="background: url({% static 'img/hero-bg-3.jpg' %})">
+        <div class="container mt-5"></div>
+    </section>
+
+ 
+    <section>
+        <div class="container col-md-6">
+        <form class="contact-form custom-centered mb-5" action="https://formsubmit.co/bad0d901b272058519c4dbf62cfb0ece" method="POST">
+            <div class="messages"></div>
+
+            <div class="controls">
+        
+                <div class="row">
+                    <div class="col-md">
+                        <h1>Contact Us</h1>
+                        <div class="form-group">
+                            <label for="form_name">Your Name *</label>
+                            <input id="form_name" type="text" name="name" class="form-control" placeholder="Please enter your name *" required="required" data-error="Firstname is required.">
+                            <div class="help-block with-errors"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="form_email">Email *</label>
+                            <input id="form_email" type="email" name="email" class="form-control" placeholder="Please enter your email *" required="required" data-error="Valid email is required.">
+                            <div class="help-block with-errors"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="form_need">Please specify your need *</label>
+                            <select id="form_need" name="need" class="form-control" required="required" data-error="Please specify your need.">
+                                <option value=""></option>
+                                <option value="Have a question">Have a question</option>
+                                <option value="Need prayer">Request prayer</option>
+                                <option value="Request to speak to the Pastor">Request to speak to the Pastor</option>
+                                <option value="Other">Other</option>
+                            </select>
+                            <div class="help-block with-errors"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="form_message">Message *</label>
+                            <textarea id="form_message" name="message" class="form-control" placeholder="Message for me *" rows="4" required="required" data-error="Please, leave us a message."></textarea>
+                            <div class="help-block with-errors"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <input type="submit" class="btn btn-warning btn-send" value="Send message">
+                    </div>
+                </div>
+            </div>
+        </div>
+        </form>
+     </section>
+
+ {% endblock %}

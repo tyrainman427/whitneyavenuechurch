@@ -1,0 +1,54 @@
+{% extends 'whitneyapp/base.html' %}
+{% load static %}
+
+{% block body %}
+  <style>
+   #header1 {
+      margin-bottom: 5rem;
+    }
+  </style>
+
+<section class="bg-cover bg-fixed shadow-inner dark-overlay" id="volunteer" style="background: url({% static 'img/events1.jpeg' %})">
+  <div class="py-5" id="header1">
+    <div class="overlay-content index-forward py-5">
+      <div class="container py-5 text-white text-center">
+          <p class="text-serif mb-0 text-primary">United in Spirit</p>
+          <h2 class="text-uppercase">Next Events</h2>
+      
+      </div>
+    </div>
+  </div>
+      </section>
+
+    <section>
+        {% if event %}
+        {% for ev in event %}
+        <div class="row mb-4 align-items-center p-4 p-lg-5 bg-light text-center">
+          <div class="col-lg-3 mb-4 mb-lg-0">
+            <div class="d-flex align-items-center justify-content-center justify-content-lg-start">
+              <p class="text-gray text-xl h1 mb-0">{{ ev.days}}</p>
+              <div class="ml-2">
+                <h5 class="mb-0">{{ ev.month }}</h5>
+                <p class="text-small mb-0 text-muted">{{ ev.day_of_week }}</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 text-center mb-4 mb-lg-0">
+            <h4 class="text-primary mb-1"> <a class="reset-anchor" href="">{{ ev.title }}</a></h4>
+            <p class="text-serif mb-0 text-muted">{{ ev.dates_duration }}</p>
+            <p class="text-serif mb-0 text-muted">{{ ev.location }}</p>
+          </div>
+          <div class="col-lg-3 text-lg-right"><a class="btn btn-outline-primary px-4" href="">Find out more</a></div>
+        </div>
+      </section>  
+        {% endfor %} 
+        {% else %}
+      <section> 
+        <div class="container py-5 text-dark text-center">
+          <h2 class="text-center">There are currently no events at this time</h2>
+      </div>
+    </section> 
+        {% endif %}
+       
+ 
+{% endblock %}
