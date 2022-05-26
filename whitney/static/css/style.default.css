@@ -1512,7 +1512,7 @@ a.text-hover-dark:focus, a.text-hover-dark:hover {
 
 .owl-nav-custom.hero-slider .owl-dots .owl-dot.active span {
   background: none;
-  border: 4px solid ##6a03af;
+  border: 4px solid #6a03af;
 }
 
 .countdown {
@@ -1692,6 +1692,7 @@ STYLE SWITCHER FOR DEMO
 /*
  * 2. BUTTONS
  */
+ 
 .btn {
   font-weight: 700;
   border: 1px solid transparent;
@@ -1763,7 +1764,7 @@ STYLE SWITCHER FOR DEMO
 .btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active,
 .show > .btn-primary.dropdown-toggle {
   color: #fff;
-  background-color: ##6a03af1;
+  background-color: #6a03f1;
   border-color: #8f675c;
 }
 

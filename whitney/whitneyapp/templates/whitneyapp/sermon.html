@@ -28,26 +28,73 @@
 
             <div class="container mb-5">
               <div class="row">
-              
-                <div class="card-deck mx-auto" style="min-width: 18rem;">
-                {% for vid in sermon %}
-                <div class="card" style="width: 18rem;">
-                  <img class="card-img-top" src="{{ vid.image.url }}" alt="Card image cap">
-                  <div class="card-body">
-                    <h5 class="card-title">{{vid.title}}</h5>
-                    <p class="text-serif text-primary text-small">{{ vid.source }}</p>
-                    <p class="text-muted text-truncate">{{ vid.description }} </p>
-                    {% comment %} <a href="#" class="btn btn-primary">Go somewhere</a> {% endcomment %}
+
+                <div class="card text-center">
+                  <div class="card-header">
+                    <ul class="nav nav-tabs card-header-tabs">
+                      <li class="nav-item">
+                        <a class="nav-link" aria-current="true" data-bs-toggle="tab" href="#sermon">Sermon</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#teachings" data-bs-toggle="tab">Teachings</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link disabled" href="#">Disabled</a>
+                      </li>
+                    </ul>
                   </div>
-                  {% comment %} <div class="card-footer mb-3">
-                    <small class="text-muted">Last updated 3 mins ago</small>
-                  </div> {% endcomment %}
+                  <form class="card-body tab-content">
+                    <div class="tab-pane active" id="sermon">
+                      <div class="card-body">
+                        <div class="card-deck mx-auto" style="min-width: 18rem;">
+                          {% for vid in sermon %}
+                          <div class="card" style="width: 18rem;">
+                            <img class="card-img-top" src="{{ vid.image.url }}" alt="Card image cap">
+                            <div class="card-body">
+                              <h5 class="card-title">{{vid.title}}</h5>
+                              <p class="text-serif text-primary text-small">{{ vid.source }}</p>
+                              <p class="text-muted text-truncate">{{ vid.description }} </p>
+                              {% comment %} <a href="#" class="btn btn-primary">Go somewhere</a> {% endcomment %}
+                            </div>
+                            {% comment %} <div class="card-footer mb-3">
+                              <small class="text-muted">Last updated 3 mins ago</small>
+                            </div> {% endcomment %}
+                          </div>
+                          {% endfor %}
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tab-pane" id="teachings">
+                        <p class=" card-text">Teachings section</p>
+                        <div class="card-body">
+                          <div class="card-deck mx-auto" style="min-width: 18rem;">
+                            {% for vid in sermon %}
+                            <div class="card" style="width: 18rem;">
+                              <img class="card-img-top" src="{{ vid.image.url }}" alt="Card image cap">
+                              <div class="card-body">
+                                <h5 class="card-title">{{vid.title}}</h5>
+                                <p class="text-serif text-primary text-small">{{ vid.source }}</p>
+                                <p class="text-muted text-truncate">{{ vid.description }} </p>
+                                {% comment %} <a href="#" class="btn btn-primary">Go somewhere</a> {% endcomment %}
+                              </div>
+                              {% comment %} <div class="card-footer mb-3">
+                                <small class="text-muted">Last updated 3 mins ago</small>
+                              </div> {% endcomment %}
+                            </div>
+                            {% endfor %}
+                          </div>
+                        </div>
+                    </div>
+                </form>
+                  
+                    </div>
+                  </div>
                 </div>
-                {% endfor %}
-              </div>
-            </div>
-              </div>
-            </div>
+          
+        </div>
+
+        
+          
 
             {% comment %} <div class="row">
       
@@ -66,5 +113,6 @@
               </div> {% endcomment %}
         
           </div>
+
    
   {% endblock %}

@@ -1,6 +1,7 @@
 {% extends 'whitneyapp/base.html' %}
 {% load static %}
 
+
 {% block body %}
     <!-- Hero Slider -->
     <section class="bg-cover bg-fixed shadow-inner" style="background: url({% static 'img/divider-img-2.jpg' %})">
@@ -19,7 +20,7 @@
       </div>    
 
     
-    <!-- Scriptures Section-->
+    {% comment %} <!-- Scriptures Section-->
     <section id="features">
       <div class="container-fluid p-0">
         <div class="row p-0 text-center align-items-stretch">
@@ -61,7 +62,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> {% endcomment %}
 
     <!-- Mission Section-->
     <section id="works" class="mt-5 mb-5">
@@ -72,7 +73,7 @@
             <div class="h-100 d-flex flex-column p-5 justify-content-center">
               <p class="text-serif text-primary mb-0"></p>
               <h2 class="text-uppercase">Our Mission</h2>
-              <p class="text-muted">A place where like minded Christians can worship, fellowship and grow in the knowledge of Jesus Christ our lord and savior. We strive to spread the message and love of Christ, while growing in maturity and equiping the saints for the jobs of ministry. The church is a light on a hill bringing the good news to all.</p>
+              <p class="text-muted">A place where like minded Christians can worship, fellowship and grow in the knowledge of Jesus Christ our Lord and Savior. We strive to spread the message and love of Christ, while growing in maturity and equiping the saints for the jobs of ministry. The church is a light on a hill bringing the good news to all.</p>
               <ul class="list-check pl-0">
                 {% comment %} <li>
                   <p class="mb-0 text-muted mb-2">Eu vim atqui ludus petentium, suas idque est id.</p>
@@ -84,7 +85,7 @@
                   <p class="mb-0 text-muted mb-2">Sed everti utroque, vis ea oblique pertinax con.</p>
                 </li> {% endcomment %}
               </ul><img class="mb-3" src="{% static 'img/signature.png' %}" alt="..." width="90">
-              <h6 class="text-uppercase mb-0">Wilton Carraway</h6>
+              <h6 class="text-uppercase mb-0">Wilton Carraway Jr</h6>
               <p class="text-serif text-primary text-small mb-0">Pastor</p>
             </div>
           </div>
@@ -93,7 +94,7 @@
     </section>
    
     <!-- Next Event Section-->
-    <section class="bg-primary-shade text-white py-5 mt-5 mb-5" id="events">
+    {% comment %} <section class="bg-primary-shade text-white py-5 mt-5 mb-5" id="events">
       <div class="container text-center">
         <div class="row align-items-center">
           <div class="col-lg-3 text-lg-right mb-4 mb-lg-0">
@@ -106,12 +107,105 @@
           <div class="col-lg-3 text-lg-right"><a class="btn btn-outline-light px-4" href="{% url 'whitney:events' %}">Learn more</a></div>
         </div>
       </div>
+    </section> {% endcomment %}
+
+  <style>
+  .bg-purple {
+    background:#6a03af;
+  }
+  .btn1 {
+      color: #fff;
+      font-size: 20px;
+      font-weight: 800;
+      text-transform: uppercase;
+      position: relative;
+      border-radius: 0 !important;
+      border: none;
+      transition:all 0.3s ease 0s;
+      height:10em;
+      width:10em;
+  }
+  .btn1:hover,
+  .btn1.active:hover{
+      color: #ffffff;
+  }
+  .btn1:before{
+      content: "";
+      position: absolute;
+      top: -7px;
+      left: 0;
+      background-color:#2E0014;
+      width: 30%;
+      height: 4px;
+      transition:all 0.3s ease 0s;
+  }
+  .btn1:after{
+      content: "";
+      position: absolute;
+      bottom: -7px;
+      right: 0;
+      background-color:#2E0014;
+      width: 30%;
+      height: 4px;
+      transition:all 0.3s ease 0s;
+  }
+  .btn1:hover:before,
+  .btn1:hover:after,
+  .btn1.active:before,
+  .btn1.active:after{
+      width: 100%;
+  }
+
+  @media screen and (max-width: 575px){
+      .btn1{
+          margin-bottom: 50px !important;
+      }
+  }
+
+  </style>
+
+    <!-- Button Page Section-->
+    <section class="text-dark bg-white py-5 mt-5 mb-5 shadow-lg p-3 mb-5 rounded" id="pages">
+      <div class="container text-center">
+        <div class="row">
+          <h1 class="text-uppercase text-serif mb-5" style="color:#6a03af;"><u>media</u></h1>
+          <div class="col-sm-6">
+          <a href="{% url 'whitney:sermon' %}" class="btn btn-lg btn1 bg-primary-shade">SERMONS</a>
+          </div>
+            <div class="col-sm-6">
+              <a href="#" class="btn btn-lg btn1 bg-primary-shade">TEACHINGS</a>
+              </div>
+            </div>
+        </div>
+      </div>
     </section>
 
+       <!-- Donation Section-->
+       <section id="donation">
+        <div class="container-fluid px-0 mb-5">
+          <div class="row align-items-stretch">
+            <div class="col-lg-6 bg-light py-lg-5 order-2 order-lg-1">
+              <div class="h-100 d-flex flex-column p-5 justify-content-center text-lg-right">
+                <div class="w-100">
+                  <p class="text-serif text-primary mb-0">Sharing our faith</p>
+                  <h2 class="text-uppercase mb-0">Donate now</h2>
+                  <div class="row">
+                    <div class="col-lg-10 ml-auto">
+                      <p class="text-muted my-4">All donations and proceeds go to maintaining the Church and other services.</p>
+                    </div>
+                  </div>
+                  <div class="d-block"><a class="btn btn-primary px-4" href="">Donate now</a></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 half-page-banner bg-cover bg-center order-1 order-lg-2" style="background: url({% static 'img/donation.jpeg' %})"></div>
+          </div>
+        </div>
+      </section>
 
-    <!-- Services Section-->
-    {% comment %} <section class="pb-5">       
-      <div class="container pb-5 buttonSize">
+    <!--Modal Button Section-->
+     <section class="pb-5">       
+      <div class="container pb-5 buttonSize mt-5">
         <div class="row align-items-center text-center">
           <div class="col-lg-3 col-sm-6 my-2 my-sm-0">
               <!-- Button trigger modal -->
@@ -220,6 +314,121 @@
               </div>
         </div>
       </div>
-    </section> {% endcomment %}
+    </section> 
+
+    <section class="bg-white text-white py-5 mb-5 overlay-content" id="pages">
+      <!-- Clients Section-->
+      <style>
+.img-container{
+  position:relative;
+  display:inline-block;
+}
+.img-container .overlay{
+  position:absolute;
+  top:120;
+  left:0;
+  width:100%;
+  height:100%;
+  background:blueviolet;
+  opacity:0;
+  transition:opacity 500ms ease-in-out;
+}
+.img-container:hover .overlay{
+  opacity:1;
+}
+.overlay span{
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  color:#fff;
+}
+      </style>
+        
+      <div class="container pb-5">
+       
+          
+ <div class="row align-items-center text-center mb-5">
+          <div class="col-lg-4 col-sm-6 img-container">
+            <a href="https://ballheadzct.com/">Ball headz</a><br>
+            <img src="{% static 'img/ballheads.png' %}" alt="..." width="120">
+            <div class="overlay mb-5">
+              <span>Ball Headz is dedicated to teaching youth to apply the principals of mindfulness to every aspect of their lives so that they feel empowered to make a positive impact on the community.</span>
+            </div>
+          </div>
+          <div class="col-lg-4 col-sm-6 my-2 my-sm-0 img-container">
+            <a href="https://sensiblewomen.org/">Sensible Women’s Initiative</a><br>
+            <img src="{% static 'img/butterfly.png' %}" alt="..." width="120">
+            <div class="overlay">
+              <span>Our Mission -We will reach out to and lift up young ladies, utilizing our talents and skills to assist them in their preparation for successful living.</span>
+            </div>
+          </div>
+          <div class="col-lg-4 col-sm-6 my-2 my-sm-0 img-container">
+            <a href="https://818missions.com/ ">8:18 Missions</a><br>
+            <img src="{% static 'img/818.png' %}" alt="..." width="120">
+            <div class="overlay">
+              <span>We are dedicated to liberating generational poverty through holistic quality care for children and families in the Philippines. We see communities TRANSFORMED, families RECONCILED and lives HEALED emotionally, physically and spiritually.</span>
+            </div>
+        </div>
+        </div> 
+      </div>
+    </section>
+   
+
+        <!-- Service Times -->
+        <section>   
+          <div class="container py-5">
+              <div class="row align-items-stretch">
+                <div class="col-lg-6 pr-lg-0">           
+                  <div class="mapouter"><div class="gmap_canvas"><iframe width="800" height="475" id="gmap_canvas" src="https://maps.google.com/maps?q=2141%20Whitney%20Avenue,%20North%20Haven,%20CT%2006473&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://123movies-to.org"></a><br><style>.mapouter{position:relative;text-align:right;height:500px;width:600px;}</style><a href="https://www.embedgooglemap.net"></a><style>.gmap_canvas {overflow:hidden;background:none!important;height:500px;width:600px;}</style></div></div>
+                </div>
+                <div class="col-lg-6 pl-lg-0 mb-0">
+                  <div class="bg-light p-3 h-80 shadow p-3 bg-white rounded">
+                    <h4>Service Times</h4>
+                    <p class="text-muted"></p>
+                    <div class="col-md-12">
+                      <!-- <h5 class="mb-4 mt-3"></h5> -->
+                      <ul class="list-unstyled">
+                        <li class="mb-2">
+                          <h6 class="mb-1 text-primary">Monday - Men's Empowerment</a></h6>
+                          <p class="text-muted text-small text-fancy mb-0">5:30PM - 6:30PM</p>
+                        </li>
+                        <li class="mb-2">
+                          <h6 class="mb-1 text-primary">Tuesday - Singing</a></h6>
+                          <p class="text-muted text-small text-fancy mb-0">7PM-8PM</p>
+                        </li>
+                        <li class="mb-2">
+                          <h6 class="mb-1 text-primary">Wednesday - Espanol</a></h6>
+                          <p class="text-muted text-small text-fancy mb-0">7:30PM-9PM</p>
+                        </li>
+                        <li class="mb-2">
+                          <h6 class="mb-1 text-primary">Thursday - Equipping</a></h6>
+                          <p class="text-muted text-small text-fancy mb-0">7PM - 8PM</p>
+                        </li>
+                        <li class="mb-2">
+                          <h6 class="mb-1 text-primary">Friday - Espanol</a></h6>
+                          <p class="text-muted text-small text-fancy mb-0">7:30PM-9PM</p>
+                        </li>
+                        <li class="mb-2">
+                          <h6 class="mb-1 text-primary">Saturday - Ladie's Fellowship</a></h6>
+                          <p class="text-muted text-small text-fancy mb-0">11AM-1PM</p>
+                        </li>
+                        <li class="mb-2">
+                          <h6 class="mb-1 text-primary">Sunday</h6>
+                          <p class="text-muted text-small text-fancy mb-0">10AM-10:45AM Adult & Children Classes</p>
+                          <p class="text-muted text-small text-fancy mb-0">11AM Worship</p>
+                        </li>
+                      </ul>
+                    </div>
+                    <!-- <ul class="list-unstyled mb-0 text-muted">
+                      <li class="mb-2"><a class="reset-anchor" href="tel:+2032487431"> <i class="fas fa-phone text-primary mr-3"></i><span>+203 248 7431</span></a></li>
+                      <li class="mb-2"><a class="reset-anchor" href="text.html"> <i class="fas fa-globe-americas text-primary mr-3"></i><span>2141 Whitney Avenue, North Haven, CT 06473</span></a></li>
+                      <li class="mb-2"><a class="reset-anchor" href="mailto:church@example.com"> <i class="far fa-envelope text-primary mr-3"></i><span>info@whitneyavenuechurchofchrist.com</span></a></li>
+                    </ul> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+      </section>
+
   </section>
   {% endblock %}
